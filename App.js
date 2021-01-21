@@ -38,7 +38,7 @@ const RootStack = createStackNavigator({
 });
 
 class RootComponent extends React.Component {
-  state = {test: 'not important'};
+  static router = RootStack.router;
 
   render() {
     return (
@@ -49,8 +49,6 @@ class RootComponent extends React.Component {
     );
   }
 }
-
-RootComponent.router = RootStack.router;
 
 const AppContainer = createAppContainer(RootComponent);
 
